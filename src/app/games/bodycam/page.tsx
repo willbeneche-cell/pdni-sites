@@ -107,96 +107,104 @@ export default function BodycamPage() {
 
 
                 {/* --- SECTION GALERIE D'IMAGES --- */}
-        <section className="mb-20 w-full max-w-7xl mx-auto px-4">
+        <section className="mb-20">
           <h2 className="text-sm font-black uppercase tracking-[0.3em] text-slate-500 mb-8 text-center">Game Screenshots Gallery</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {["https://ankergames.net/uploads/screenshots/02-2025/Bodycam%20Steam%20Game_1739438903.webp",
-             "https://ankergames.net/uploads/screenshots/02-2025/Bodycam%20Reviews_1739438904.webp",
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[ 
+              "https://ankergames.net/uploads/screenshots/02-2025/Bodycam%20Steam%20Game_1739438903.webp",
+              "https://ankergames.net/uploads/screenshots/02-2025/Bodycam%20Reviews_1739438904.webp",
               "https://ankergames.net/uploads/screenshots/02-2025/Bodycam%20Online_1739438904.webp",
-               "https://ankergames.net/uploads/screenshots/02-2025/Bodycam%20AnkerGames_1739438904.webp"].map((i) => (
-              <div key={i} className="rounded-xl overflow-hidden border border-white/10 bg-slate-900 aspect-video">
-                <img src="" alt={`Screenshot ${i}`} className="w-full h-full object-cover" />
-              </div>
+              "https://ankergames.net/uploads/screenshots/02-2025/Bodycam%20AnkerGames_1739438904.webp" 
+            ].map((src, i) => (
+              <motion.div 
+                key={i}
+                whileHover={{ scale: 1.05, zIndex: 10 }}
+                className="rounded-xl overflow-hidden border border-white/10 cursor-zoom-in bg-slate-900"
+              >
+                <img src={src} alt={`Screenshot ${i}`} className="w-full h-full object-cover aspect-video" />
+              </motion.div>
             ))}
           </div>
         </section>
 
-        {/* --- SECTION CÔTE À CÔTE (L'UN À CÔTÉ DE L'AUTRE) --- */}
-        <section className="max-w-7xl mx-auto px-4 mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        {/* --- SECTION INSTALLATION & CONFIG --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          
+          {/* GUIDE D'INSTALLATION */}
+          <div className="bg-slate-900/40 border border-white/5 rounded-[2rem] overflow-hidden">
+            <div className="p-8 border-b border-white/5 bg-white/[0.02] flex items-center gap-4">
+              <div className="p-3 bg-emerald-500/20 rounded-xl text-emerald-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              </div>
+              <div>
+                <h3 className="font-black uppercase tracking-tighter text-xl text-white">Installation Guide</h3>
+                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Step-by-step setup process</p>
+              </div>
+            </div>
             
-            {/* BLOC 1: INSTALLATION GUIDE */}
-            <div className="bg-[#0f172a]/80 border border-white/5 rounded-[2rem] overflow-hidden flex flex-col min-w-0 shadow-2xl">
-              <div className="p-6 border-b border-white/5 bg-white/[0.02] flex items-center gap-4">
-                <div className="p-3 bg-emerald-500/20 rounded-xl text-emerald-500 flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                </div>
-                <div>
-                  <h3 className="font-black uppercase tracking-tighter text-lg text-white">Installation Guide</h3>
-                  <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Step-by-step setup process</p>
-                </div>
+            <div className="p-8 space-y-6">
+              <div className="flex gap-4 items-start">
+                <span className="text-emerald-500 font-black text-lg">1</span>
+                <p className="text-sm text-slate-300">Game is **pre-installed / portable**, therefore you do not need to install the game.</p>
               </div>
-              
-              <div className="p-8 space-y-5 flex-1">
-                <div className="flex gap-4">
-                  <span className="text-emerald-500 font-black text-lg flex-shrink-0">1</span>
-                  <p className="text-sm text-slate-300">Game is **pre-installed / portable**, therefore you do not need to install the game.</p>
-                </div>
-                <div className="flex gap-4">
-                  <span className="text-emerald-500 font-black text-lg flex-shrink-0">2</span>
-                  <p className="text-sm text-slate-300">Just **extract the rar / zip file**.</p>
-                </div>
-                <div className="flex gap-4">
-                  <span className="text-emerald-500 font-black text-lg flex-shrink-0">3</span>
-                  <p className="text-sm text-slate-300">Simply **launch the game from Bodycam.exe** inside the game folder.</p>
-                </div>
+              <div className="flex gap-4 items-start">
+                <span className="text-emerald-500 font-black text-lg">2</span>
+                <p className="text-sm text-slate-300">Just **extract the rar / zip file**.</p>
+              </div>
+              <div className="flex gap-4 items-start">
+                <span className="text-emerald-500 font-black text-lg">3</span>
+                <p className="text-sm text-slate-300">Simply **launch the game from Bodycam.exe** inside the game folder.</p>
+              </div>
 
-                <div className="mt-6 p-5 bg-orange-500/5 border border-orange-500/20 rounded-2xl space-y-2">
-                  <h4 className="text-orange-400 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">⚠️ Important Notes</h4>
-                  <ul className="text-[11px] text-slate-400 space-y-1 list-disc pl-4">
-                    <li>Install necessary apps from **Redist** folder.</li>
-                    <li>Always extract in **Antivirus excluded folder**.</li>
-                    <li>Always **run the game as administrator**.</li>
-                    <li>Read **Installation Guide.txt**.</li>
-                  </ul>
-                </div>
+              {/* IMPORTANT NOTES */}
+              <div className="mt-8 p-6 bg-orange-500/5 border border-orange-500/20 rounded-2xl space-y-3">
+                <h4 className="text-orange-400 font-black text-xs uppercase tracking-widest flex items-center gap-2">
+                    ⚠️ Important Notes
+                </h4>
+                <ul className="text-[11px] text-slate-400 space-y-2 list-disc pl-4">
+                  <li>Install necessary apps from **Redist** or **_CommonRedist**.</li>
+                  <li>Always extract game in **Antivirus / Defender excluded folder**.</li>
+                  <li>Always **run the game as administrator**.</li>
+                  <li>For detailed guide, make sure to read **Installation Guide.txt**.</li>
+                </ul>
               </div>
             </div>
-
-            {/* BLOC 2: SYSTEM REQUIREMENTS */}
-            <div className="bg-[#0f172a]/80 border border-white/5 rounded-[2rem] overflow-hidden flex flex-col min-w-0 shadow-2xl">
-              <div className="p-6 border-b border-white/5 bg-white/[0.02] flex items-center gap-4">
-                <div className="p-3 bg-emerald-500/20 rounded-xl text-emerald-500 flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                </div>
-                <div>
-                  <h3 className="font-black uppercase tracking-tighter text-lg text-white">System Requirements</h3>
-                  <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Minimum specifications needed</p>
-                </div>
-              </div>
-
-              <div className="p-8 flex-1 flex flex-col justify-between">
-                <p className="text-[9px] font-black text-center text-slate-500 uppercase tracking-[0.2em] mb-6">Requires a 64-bit processor and operating system</p>
-                <div className="space-y-0.5">
-                  {[
-                    { label: "OS", value: "Windows 10/11" },
-                    { label: "Processor", value: "AMD Ryzen 7 3800X, Intel Core i7-10700K" },
-                    { label: "Memory", value: "16 GB RAM" },
-                    { label: "Graphics", value: "NVIDIA RTX 3060 (12 GB)" },
-                    { label: "Network", value: "Broadband Internet connection" },
-                    { label: "Storage", value: "50 GB available space" },
-                  ].map((req, i) => (
-                    <div key={i} className="flex justify-between items-center py-3 border-b border-white/[0.02] gap-4">
-                      <span className="text-[10px] font-black uppercase text-slate-500 tracking-widest flex-shrink-0">{req.label}</span>
-                      <span className="text-[11px] font-bold text-slate-200 text-right">{req.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
           </div>
-        </section>
+
+          {/* SYSTEM REQUIREMENTS */}
+          <div className="bg-slate-900/40 border border-white/5 rounded-[2rem] overflow-hidden">
+            <div className="p-8 border-b border-white/5 bg-white/[0.02] flex items-center gap-4">
+              <div className="p-3 bg-purple-500/20 rounded-xl text-purple-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <div>
+                <h3 className="font-black uppercase tracking-tighter text-xl text-white">System Requirements</h3>
+                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Minimum specifications needed</p>
+              </div>
+            </div>
+
+            <div className="p-8">
+              <p className="text-[10px] font-black text-center text-slate-500 uppercase tracking-[0.2em] mb-8">Requires a 64-bit processor and operating system</p>
+              
+              <div className="space-y-1">
+                {[
+                  { label: "OS", value: "Windows 10/11" },
+                  { label: "Processor", value: "AMD Ryzen 7 3800X / Intel i7-10700K" },
+                  { label: "Memory", value: "16 GB RAM" },
+                  { label: "Graphics", value: "NVIDIA RTX 3060 (12 GB) / RX 6600 XT" },
+                  { label: "DirectX", value: "Version 12" },
+                  { label: "Network", value: "Broadband Internet connection" },
+                  { label: "Storage", value: "50 GB available space" },
+                ].map((req, i) => (
+                  <div key={i} className="flex justify-between items-center py-3 border-b border-white/[0.02]">
+                    <span className="text-[10px] font-black uppercase text-slate-500 tracking-widest">{req.label}</span>
+                    <span className="text-xs font-bold text-slate-200 text-right ml-4">{req.value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
 
 
