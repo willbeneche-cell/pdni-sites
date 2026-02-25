@@ -41,9 +41,16 @@ export default function RvThereYetPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent" />
               </div>
-              <button className="w-full mt-6 bg-cyan-600 hover:bg-cyan-500 text-white font-black py-4 rounded-2xl transition-all shadow-lg active:scale-95">
-                DOWNLOAD GAME (1.5 GB)
-              </button>
+<a 
+  href="https://tunnel1.dlproxy.uk/download/XAJeWO15O4C19Ai3Jvuqitqg5l1_CCncB25Eaa4Z71JAAM2ppGVMblIY3AWDW8k1fY0JuJ6RuqfNreqTDOqV3ZNpqRZ8J8r9qy-NDNYXkXM3a5mg8E01q2LmtxQRXiujEZsQvyzBd73k8Ohs9ICwIfqd3UtHnxkLamofcduc94Ly387lsG6FfIXCHvWNHXUW6NTvhHi_Hj1lokFJd_IkmUYtrHwU2wignMSU-5dDDCjiMqB7abNMgc0_Rl0Boy-iNkAutGNojNhPZb14BMnhhMzwr_eW9uL6jRDQPhYmOxUg8k6Gm98JCl_NiE7oApMQyLFjraYFHbrND7SMjPxQmoLclHWX4bVIQ8lfilM18hoK0vlgqO78aix_tQ5FEvwBXygHNKuUy0dp0uYQCqSTjGR1bgjJuKeBRcwu8lqvjjM66EZ_V82z0Ne_IrGmOrFvzLVxsbK5buEtqTd5B5sBq0qnJ5aBWUQ4Fooigt7BVFX09NQEjtbY_5IWMq8iQrV7AiYp5Uq0yMEvelKr27209wJwtA5VZ3nL46kUWxqX1oumgEZ4hpiN-YgsRG_aYD6EeBAHcXmCull8LLwp102w0mvsslbqdA7SppXAWtEOyz8?sig=bdpDI8HIRLl2ez4EjypC4S0xCL2R3afBQ4vZ8r-4KCE"
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="block w-full"
+>
+  <button className="w-full mt-6 bg-cyan-600 hover:bg-cyan-500 text-white font-black py-4 rounded-2xl transition-all shadow-lg active:scale-95">
+    DOWNLOAD GAME (1.5 GB)
+  </button>
+</a>
             </div>
           </motion.div>
 
