@@ -94,28 +94,7 @@ export default function PeakGamePage() {
           </motion.div>
         </section>
 
-        {/* SYSTEM REQUIREMENTS (Basé sur les standards de jeux similaires) */}
-        <section className="bg-slate-900/50 border border-white/5 rounded-[2.5rem] p-10 max-w-2xl mx-auto">
-          <h2 className="text-2xl font-black uppercase italic tracking-tighter text-white mb-8 text-center">System Requirements</h2>
-          <div className="space-y-4 text-sm">
-            <div className="flex justify-between py-3 border-b border-white/5">
-              <span className="text-slate-500 font-bold uppercase tracking-widest text-[10px]">OS</span>
-              <span className="text-white font-bold">Windows 10/11 (64-bit)</span>
-            </div>
-            <div className="flex justify-between py-3 border-b border-white/5">
-              <span className="text-slate-500 font-bold uppercase tracking-widest text-[10px]">Processor</span>
-              <span className="text-white font-bold">Intel Core i5-4590 / AMD FX 8350</span>
-            </div>
-            <div className="flex justify-between py-3 border-b border-white/5">
-              <span className="text-slate-500 font-bold uppercase tracking-widest text-[10px]">Memory</span>
-              <span className="text-white font-bold">8 GB RAM</span>
-            </div>
-            <div className="flex justify-between py-3">
-              <span className="text-slate-500 font-bold uppercase tracking-widest text-[10px]">Storage</span>
-              <span className="text-white font-bold">2 GB available space</span>
-            </div>
-          </div>
-        </section>
+      
 
 
 
