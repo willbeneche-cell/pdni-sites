@@ -14,7 +14,7 @@ const ScheduleIPage = () => {
           <div className="w-full md:w-80 shrink-0">
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-[3/4]">
               <img 
-                src="https://ankergames.net/uploads/screenshots/03-2025/Schedule%20I%20Screenshot_1742366663.webp" 
+                src="https://ankergames.net/uploads/poster/03-2025/QYl37hCfJS.webp" 
                 alt="Schedule I Cover" 
                 className="w-full h-full object-cover"
               />
