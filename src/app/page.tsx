@@ -75,7 +75,7 @@ export default function Home() {
           </motion.div>
           <nav className="hidden lg:flex items-center gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
             <Link href="/" className="hover:text-cyan-400 transition-colors">All Games</Link>
-            <Link href="/categories" className="hover:text-cyan-400 transition-colors">Categories</Link>
+       <Link href="/categories" className="hover:text-cyan-400 transition-colors">Categories</Link>
             <Link href="#" className="text-white border-b-2 border-cyan-500 pb-1">Trending</Link>
           </nav>
         </div>
