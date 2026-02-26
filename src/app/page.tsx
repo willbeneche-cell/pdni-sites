@@ -48,8 +48,8 @@ export default function Home() {
     { title: "Secret Neighbor", slug: "secret-neighbor", image: "https://ankergames.net/uploads/poster/10-2024/dxPAVUXMUH.webp" },
     { title: "BodyCam", slug: "bodycam", image: "https://ankergames.net/uploads/poster/10-2024/H1Njv5HchV.webp" },
     { title: "Schedule I", slug: "schedule-i", image: "https://ankergames.net/uploads/poster/03-2025/QYl37hCfJS.webp" },
-    { title: "Sons Of The Forest", slug: "sons-of-the-forest", image: "https://ankergames.net/uploads/poster/11-2024/GJ0RPMoGrs.webp" },
-    { title: "Inside The Backrooms", slug: "inside-the-backrooms", image: "https://ankergames.net/uploads/poster/10-2024/gtCM3aiaZc.webp" },
+    { title: "Sons Of The Forest", slug: "sons-of-the-forest", image: "https://ankergames.net/uploads/poster/10-2024/gtCM3aiaZc.webp" },
+    { title: "Inside The Backrooms", slug: "inside-the-backrooms", image: "https://ankergames.net/uploads/poster/11-2024/GJ0RPMoGrs.webp" },
     { title: "Escape The Backrooms", slug: "escape-the-backrooms", image: "https://ankergames.net/uploads/poster/10-2024/La83HeVh5s.webp" },
     { title: "Lethal Company", slug: "lethal-company", image: "https://ankergames.net/uploads/poster/10-2024/xeQh3iSoMk.webp" },
   ];
