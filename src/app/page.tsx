@@ -1,6 +1,6 @@
 "use client"; // Obligatoire pour les animations
 import Spline from '@splinetool/react-spline';
-import React, { Suspense } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -20,12 +20,14 @@ const GamePoster = ({ title, image, slug, index }: { title: string, image: strin
           alt={title} 
           className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1" 
         />
+        {/* Overlay progressif au hover */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity flex items-end p-5">
           <div className="translate-y-2 group-hover:translate-y-0 transition-transform">
             <span className="text-white font-black text-xs uppercase italic tracking-tighter block mb-1 opacity-0 group-hover:opacity-100 transition-opacity">Play Now</span>
             <span className="text-white font-bold text-sm leading-tight">{title}</span>
           </div>
         </div>
+        {/* Effet de brillance (Glossy) au hover */}
         <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
       </div>
     </Link>
@@ -56,15 +58,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#020617] text-slate-200 selection:bg-cyan-500/30 overflow-x-hidden">
       
-      {/* 🤖 IMPORTATION DU ROBOT R4X BOT (FIXE EN ARRIÈRE-PLAN) */}
-      <div className="fixed inset-0 z-0 pointer-events-none opacity-40 lg:opacity-70">
-        <Suspense fallback={null}>
-          <Spline scene="https://prod.spline.design/3w1NbWM7TPJO8Vfr/scene.splinecode" />
-        </Suspense>
-      </div>
-
       {/* EFFET DE FOND : Glows animés */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden z-[1]">
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-cyan-500/10 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
       </div>
@@ -81,7 +76,7 @@ export default function Home() {
           </motion.div>
           <nav className="hidden lg:flex items-center gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
             <Link href="/all-games" className="hover:text-cyan-400 transition-colors">All Games</Link>
-            <Link href="/categories" className="hover:text-cyan-400 transition-colors">Categories</Link>
+       <Link href="/categories" className="hover:text-cyan-400 transition-colors">Categories</Link>
             <Link href="#" className="text-white border-b-2 border-cyan-500 pb-1">Trending</Link>
           </nav>
         </div>
@@ -162,6 +157,7 @@ export default function Home() {
         </div>
       </main>
 
+      {/* FOOTER SIMPLE & CLEAN */}
       <footer className="mt-20 border-t border-white/5 p-10 text-center text-slate-600 text-[10px] font-bold uppercase tracking-[0.5em]">
         © 2026 PDNI GAMES - THE NEXT GENERATION OF GAMING
       </footer>
